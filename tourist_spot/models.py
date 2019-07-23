@@ -14,7 +14,7 @@ class TouristSpot(models.Model):
     attractions = models.ManyToManyField(Attractions, verbose_name='Atrações')
     comments = models.ManyToManyField(Comments, verbose_name='Comentários')
     assessments = models.ManyToManyField(Assessments, verbose_name='Avaliações')
-    adresses = models.ForeignKey(Adresses, verbose_name='Endereço', on_delete=models.CASCADE)
+    adresses = models.ForeignKey(Adresses, verbose_name='Endereço', on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = 'Ponto Turístico'

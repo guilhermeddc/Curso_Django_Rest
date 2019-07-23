@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Comments(models.Model):
     user = models.ForeignKey(User, verbose_name='Usuário', on_delete=models.CASCADE)
     comments = models.TextField('Comentários')

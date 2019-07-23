@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Attractions(models.Model):
     name = models.CharField('Nome', max_length=150)
     description = models.TextField('Descrição')
