@@ -25,7 +25,7 @@ from assessments.api.viewsets import AssessmentViewSet
 
 
 router = routers.DefaultRouter()
-router.register(r'pontoturistico', TouristSpotViewSet)
+router.register(r'pontoturistico', TouristSpotViewSet, base_name='TouristSpot')
 router.register(r'atracoes', AttractionViewSet)
 router.register(r'enderecos', AddressViewSet)
 router.register(r'comentarios', CommentViewSet)
