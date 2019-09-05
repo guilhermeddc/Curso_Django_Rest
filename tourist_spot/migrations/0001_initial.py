@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=150, verbose_name='Nome')),
                 ('descriptions', models.TextField(verbose_name='Descrição')),
                 ('approved', models.BooleanField(default=False, verbose_name='Aprovado')),
-                ('adresses', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='adresses.Adresses', verbose_name='Endereço')),
+                ('adresses', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tourist_spot.End', verbose_name='Endereço')),
                 ('assessments', models.ManyToManyField(to='assessments.Assessments', verbose_name='Avaliações')),
                 ('attractions', models.ManyToManyField(to='attractions.Attractions', verbose_name='Atrações')),
                 ('comments', models.ManyToManyField(to='comments.Comments', verbose_name='Comentários')),

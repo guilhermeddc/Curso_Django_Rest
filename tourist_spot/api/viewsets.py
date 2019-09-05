@@ -1,5 +1,7 @@
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly, DjangoModelPermissions
 from rest_framework.viewsets import ModelViewSet
 from tourist_spot.api.serializers import TouristSpotSerializer
 from tourist_spot.models import TouristSpot
@@ -8,7 +10,13 @@ from tourist_spot.models import TouristSpot
 class TouristSpotViewSet(ModelViewSet):
     serializer_class = TouristSpotSerializer
     filter_backends = (SearchFilter,)
+    # permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAdminUser,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    # permission_classes = (DjangoModelPermissions,)
+    authentication_classes = (TokenAuthentication,)
     search_fields = ('name', 'descriptions', 'adresses__line1')
+    # lookup_field = 'name'
 
     def get_queryset(self):
         id = self.request.query_params.get('id', None)

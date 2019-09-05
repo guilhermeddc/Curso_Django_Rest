@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My apps
     'rest_framework',
+    'rest_framework.authtoken',
     'django_filters',
     'tourist_spot',
     'attractions',
