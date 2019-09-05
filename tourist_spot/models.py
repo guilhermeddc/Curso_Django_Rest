@@ -2,7 +2,7 @@ from django.db import models
 from attractions.models import Attractions
 from comments.models import Comments
 from assessments.models import Assessments
-from adresses.models import End
+from adresses.models import Adresses
 
 
 # Create your models here.
@@ -15,7 +15,7 @@ class TouristSpot(models.Model):
     attractions = models.ManyToManyField(Attractions, verbose_name='Atrações')
     comments = models.ManyToManyField(Comments, verbose_name='Comentários')
     assessments = models.ManyToManyField(Assessments, verbose_name='Avaliações')
-    end = models.ForeignKey(End, verbose_name='Endereço', on_delete=models.CASCADE, null=True, blank=True)
+    end = models.ForeignKey(Adresses, verbose_name='Endereço', on_delete=models.CASCADE, null=True, blank=True)
     photo = models.ImageField(upload_to='tourist-spot', null=True, blank=True)
 
     class Meta:

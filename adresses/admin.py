@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import End
+from .models import Adresses
 
 # Register your models here.
 
-admin.site.register(End)
+admin.site.register(Adresses)

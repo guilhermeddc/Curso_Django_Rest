@@ -15,7 +15,7 @@ class TouristSpotViewSet(ModelViewSet):
     permission_classes = (IsAuthenticatedOrReadOnly,)
     # permission_classes = (DjangoModelPermissions,)
     authentication_classes = (TokenAuthentication,)
-    search_fields = ('name', 'descriptions', 'adresses__line1')
+    search_fields = ('name', 'descriptions')
     # lookup_field = 'name'
 
     def get_queryset(self):

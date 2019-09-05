@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class End(models.Model):
+class Adresses(models.Model):
     line1 = models.CharField('Linha 1', max_length=150)
     line2 = models.CharField('Linha 2', max_length=150, null=True, blank=True)
     city = models.CharField('Cidade', max_length=100)
