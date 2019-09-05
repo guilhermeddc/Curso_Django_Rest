@@ -8,6 +8,7 @@ class Attractions(models.Model):
     description = models.TextField('Descrição')
     workingHours = models.TextField('Horário de Funcionamento')
     minimumAge = models.PositiveIntegerField('Idade Mínima')
+    photo = models.ImageField(upload_to='attractions', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Atração'

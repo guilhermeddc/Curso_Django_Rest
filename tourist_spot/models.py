@@ -4,6 +4,7 @@ from comments.models import Comments
 from assessments.models import Assessments
 from adresses.models import Adresses
 
+
 # Create your models here.
 
 
@@ -15,6 +16,7 @@ class TouristSpot(models.Model):
     comments = models.ManyToManyField(Comments, verbose_name='Comentários')
     assessments = models.ManyToManyField(Assessments, verbose_name='Avaliações')
     adresses = models.ForeignKey(Adresses, verbose_name='Endereço', on_delete=models.CASCADE, null=True, blank=True)
+    photo = models.ImageField(upload_to='tourist-spot', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Ponto Turístico'

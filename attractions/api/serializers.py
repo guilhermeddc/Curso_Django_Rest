@@ -6,4 +6,4 @@ class AttractionsSerializer(ModelSerializer):
 
     class Meta:
         model = Attractions
-        fields = ('id', 'name', 'description', 'workingHours', 'minimumAge')
+        fields = ('id', 'name', 'description', 'workingHours', 'minimumAge', 'photo')
